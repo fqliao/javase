@@ -23,8 +23,8 @@ public class Test {
 		Collections.shuffle(numbers);
 		//获取前五个元素
 		List<Integer> subList = numbers.subList(0, 6);
-		//对取出的元素排序
-		Collections.sort(subList);
+		//对取出的元素排序,加入reverseOrder()参数是降序
+		Collections.sort(subList,Collections.reverseOrder());
 		
 		System.out.println(subList);
 		
