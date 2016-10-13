@@ -29,25 +29,15 @@ public class Test {
 
 	private static int[] intersection(int[] a,int[] b) {
 		
-		//整型数组转为其包装类Integer数组，因为泛型不支持基本类型作为泛型参数，因此利用包装类才可以
-		Integer[] c = new Integer[a.length];
-		Integer[] d = new Integer[b.length];
-		//这里不能用System.arraycopy方法，该方法是native方法，不是java实现的，不能自动装箱和拆箱
-//		System.arraycopy(a, 0, c, 0, a.length);
-//		System.arraycopy(b, 0, d, 0, b.length);
-		//手动循环复制
-		for (int i = 0; i < c.length; i++) 
-		{
-			c[i] = a[i];
+		//将int数组转为Set集合
+		Set<Integer> aSet = new HashSet<>();
+		for (int i = 0; i < a.length; i++) {
+			aSet.add(a[i]);
 		}
-		for (int i = 0; i < d.length; i++) 
-		{
-			d[i] = b[i];
+		Set<Integer> bSet = new HashSet<>();
+		for (int i = 0; i < b.length; i++) {
+			bSet.add(b[i]);
 		}
-		
-		//将Integer数组转为Set集合
-		Set<Integer> aSet = new HashSet<>(Arrays.asList(c));
-		Set<Integer> bSet = new HashSet<>(Arrays.asList(d));
 		
 		//创建保持交集的集合
 		HashSet<Integer> result = new HashSet<>(aSet);
