@@ -63,11 +63,11 @@ public class PropertiesFrame extends JFrame{
 			//文件不存在就创建文件，设置默认参数，保存默认配置
 			propertiesFile.createNewFile();
 			
-			settings.put("left", "0");
-			settings.put("top", "0");
-			settings.put("width", ""+DEFAULT_WIDTH);
-			settings.put("height", ""+DEFAULT_HEIGHT);
-			settings.put("title", "999");
+			settings.setProperty("left", "0");
+			settings.setProperty("top", "0");
+			settings.setProperty("width", ""+DEFAULT_WIDTH);
+			settings.setProperty("height", ""+DEFAULT_HEIGHT);
+			settings.setProperty("title", "999");
 			
 			FileOutputStream out = new FileOutputStream(propertiesFile, true);//true表示追加打开
 			settings.store(out, "JavaWindowsSettings");//第二个参数，配置文件的文档说明
