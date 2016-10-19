@@ -19,7 +19,7 @@ public class SecondThread implements Runnable{
 		
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		for(int i = 0; i < 100; i++)
 		{
 			System.out.println(Thread.currentThread().getName()+" "+i);
@@ -35,6 +35,8 @@ public class SecondThread implements Runnable{
 				SecondThread st = new SecondThread();
 				new Thread(st).start();
 				new Thread(st).start();
+				//让子线程启动后立即执行，让主线程睡1ms,用Thread.sleep控制线程的执行顺序
+				Thread.sleep(1);
 			}
 		}
 		
