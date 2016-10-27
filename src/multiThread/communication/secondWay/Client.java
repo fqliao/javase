@@ -1,4 +1,4 @@
-package multiThread.communication.firstway;
+package multiThread.communication.secondWay;
 
 
 /**
@@ -17,7 +17,7 @@ public class Client {
 		
 		new Thread(drawThread).start();
 		new Thread(depositThread).start();
-		new Thread(depositThread).start();//存钱后，没有取钱的，就会阻塞等待，这不是死锁
+//		new Thread(depositThread).start();//存钱后，没有取钱的，就会阻塞等待，这不是死锁
 //		new Thread(depositThread).start();
 		
 	}

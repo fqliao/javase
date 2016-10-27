@@ -1,4 +1,4 @@
-package multiThread.communication.firstway;
+package multiThread.communication.secondWay;
 
 /**
  * @decription:取钱线程

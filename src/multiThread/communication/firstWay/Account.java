@@ -1,4 +1,4 @@
-package multiThread.communication.firstway;
+package multiThread.communication.firstWay;
 
 /**
  * @decription:银行账户

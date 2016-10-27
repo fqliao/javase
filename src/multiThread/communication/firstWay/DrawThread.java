@@ -1,23 +1,23 @@
-package multiThread.communication.firstway;
+package multiThread.communication.firstWay;
 
 /**
- * @decription:存钱线程
+ * @decription:取钱线程
  * @version:1.0
- * @date: 2016年10月27日上午11:27:16
+ * @date: 2016年10月27日上午11:27:28
  * @author: lfq
  * 
  */
-public class DepositThread implements Runnable{
+public class DrawThread implements Runnable{
 	
 	private Account account;
 	private int balance;
 	
 	
-	public DepositThread() {
+	public DrawThread() {
 		super();
 	}
 
-	public DepositThread(Account account, int balance) {
+	public DrawThread(Account account, int balance) {
 		super();
 		this.account = account;
 		this.balance = balance;
@@ -27,7 +27,7 @@ public class DepositThread implements Runnable{
 	public void run() {
 		for (int i = 0; i < 10; i++) 
 		{
-			account.deposit(balance);
+			account.draw(balance);
 		}
 	}
 
